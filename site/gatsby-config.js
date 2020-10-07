@@ -1,12 +1,19 @@
 /*eslint no-template-curly-in-string:0*/
 module.exports = {
   siteMetadata: {
-    title: `SketchXConf 2020`,
-    description: `description`,
-    author: `@you`,
+    title: `PurpleSheepConf 2020`,
+    description: `This is the workshop website!`,
+    author: `@martijnveken`,
     siteUrl: `https://monica.dev/gatsbyworkshop`,
   },
   plugins: [
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -17,7 +24,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/pencil-icon.png`,
+        icon: `src/images/sheep.png`,
       },
     },
     `gatsby-plugin-postcss`,

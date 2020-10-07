@@ -6,11 +6,11 @@ export default function speakerCard({ speakers }) {
     <div className="flex items-center flex-wrap ">
       {speakers.map(({ node }) => (
         // TODO: pass slug from node into the Link component
-        <Link to="" className="w-1/3 p-2" key={node.name}>
+        <Link to={`/${node.fields.slug}`} className="w-1/3 p-2" key={node.name}>
           <div>
             <img
               className="rounded-full inline"
-              src={node.avatar}
+              src={`/${node.avatar}`}
               alt={`Avatar of ${node.name}`}
             />
             {node.name}
